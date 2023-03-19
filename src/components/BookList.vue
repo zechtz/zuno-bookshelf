@@ -3,10 +3,7 @@
 <template>
   <div class="book-list-intro">
     <div class="icon">
-      <img
-        class="img"
-        src="@/assets/images/heroiconssolidbookopen1388-sgru.svg"
-      />
+      <img class="img" src="@/assets/images/heroiconssolidbookopen1388-sgru.svg" />
       <h2 class="intro-text">Book Shelf</h2>
     </div>
   </div>
@@ -18,7 +15,7 @@
         <div class="card-footer">
           <span class="book-author">O'Rayan, Elle</span>
           <div class="rating">
-            <i class="fas fa-star"></i>
+            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
             <span>5.0</span>
           </div>
         </div>
@@ -32,7 +29,7 @@
         <div class="card-footer">
           <span class="book-author">Scott, Jerry 1995</span>
           <div class="rating">
-            <i class="fas fa-star"></i>
+            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
             <span>3.8</span>
           </div>
         </div>
@@ -45,7 +42,7 @@
         <div class="card-footer">
           <span class="book-author">Olson, Kayla</span>
           <div class="rating">
-            <i class="fas fa-star"></i>
+            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
             <span>4.0</span>
           </div>
         </div>
@@ -58,7 +55,7 @@
         <div class="card-footer">
           <span class="book-author">Picoult, Jodi</span>
           <div class="rating">
-            <i class="fas fa-star"></i>
+            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
             <span>3.0</span>
           </div>
         </div>
@@ -71,7 +68,7 @@
         <div class="card-footer">
           <span class="book-author">Wadey, Maggie</span>
           <div class="rating">
-            <i class="fas fa-star"></i>
+            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
             <span>4.5</span>
           </div>
         </div>
@@ -84,7 +81,7 @@
         <div class="card-footer">
           <span class="book-author">O'Rayan, Elle</span>
           <div class="rating">
-            <i class="fas fa-star"></i>
+            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
             <span>5.0</span>
           </div>
         </div>
@@ -98,7 +95,7 @@
         <div class="card-footer">
           <span class="book-author">Scott, Jerry 1995</span>
           <div class="rating">
-            <i class="fas fa-star"></i>
+            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
             <span>3.8</span>
           </div>
         </div>
@@ -111,7 +108,7 @@
         <div class="card-footer">
           <span class="book-author">Olson, Kayla</span>
           <div class="rating">
-            <i class="fas fa-star"></i>
+            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
             <span>4.0</span>
           </div>
         </div>
@@ -124,7 +121,7 @@
         <div class="card-footer">
           <span class="book-author">Picoult, Jodi</span>
           <div class="rating">
-            <i class="fas fa-star"></i>
+            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
             <span>3.0</span>
           </div>
         </div>
@@ -137,7 +134,7 @@
         <div class="card-footer">
           <span class="book-author">Wadey, Maggie</span>
           <div class="rating">
-            <i class="fas fa-star"></i>
+            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
             <span>4.5</span>
           </div>
         </div>
@@ -151,7 +148,7 @@
         <div class="card-footer">
           <span class="book-author">O'Rayan, Elle</span>
           <div class="rating">
-            <i class="fas fa-star"></i>
+            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
             <span>5.0</span>
           </div>
         </div>
@@ -165,7 +162,7 @@
         <div class="card-footer">
           <span class="book-author">Scott, Jerry 1995</span>
           <div class="rating">
-            <i class="fas fa-star"></i>
+            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
             <span>3.8</span>
           </div>
         </div>
@@ -178,7 +175,7 @@
         <div class="card-footer">
           <span class="book-author">Olson, Kayla</span>
           <div class="rating">
-            <i class="fas fa-star"></i>
+            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
             <span>4.0</span>
           </div>
         </div>
@@ -191,7 +188,7 @@
         <div class="card-footer">
           <span class="book-author">Picoult, Jodi</span>
           <div class="rating">
-            <i class="fas fa-star"></i>
+            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
             <span>3.0</span>
           </div>
         </div>
@@ -204,7 +201,7 @@
         <div class="card-footer">
           <span class="book-author">Wadey, Maggie</span>
           <div class="rating">
-            <i class="fas fa-star"></i>
+            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
             <span>4.5</span>
           </div>
         </div>
@@ -312,9 +309,9 @@ $star-color: #f3d23e;
           position: relative;
           top: 10px;
 
-          i {
-            font-size: 24px;
-            color: $star-color;
+          img {
+            width: 25px;
+            height: 25px;
             cursor: pointer;
           }
 
