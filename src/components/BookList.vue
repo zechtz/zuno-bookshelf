@@ -1,8 +1,16 @@
 <script setup lang="ts"></script>
 
 <template>
+  <div class="book-list-intro">
+    <div class="icon">
+      <img
+        class="img"
+        src="@/assets/images/heroiconssolidbookopen1388-sgru.svg"
+      />
+      <h2 class="intro-text">Book Shelf</h2>
+    </div>
+  </div>
   <div class="card-grid">
-
     <div class="card">
       <img src="@/assets/images/book-cover.png" alt="Image description" />
       <div class="card-info">
@@ -207,6 +215,35 @@
 
 <style scoped lang="scss">
 $star-color: #f3d23e;
+
+.book-list-intro {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: $box-width;
+  font-family: $primary-font;
+
+  .icon {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+
+    .img {
+      height: 24px;
+      width: 24px;
+      margin-right: 0;
+    }
+
+    .intro-text {
+      margin-left: 5px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 32px;
+      color: #1e1e1e;
+    }
+  }
+}
 
 .card-grid {
   display: grid;
