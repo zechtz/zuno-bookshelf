@@ -40,7 +40,7 @@
     justify-content: flex-start;
     align-items: center;
     height: 80px;
-  width: $box-width;
+    width: $box-width;
   }
 
   .logo {
@@ -56,8 +56,8 @@
     .logo-text {
       color: #1c3f3a;
       font-size: 24px;
-      font-style: italic; // Make logo text italic
-      font-family: "Gill Sans", sans-serif; // Use Gill Sans font family
+      font-style: italic;
+      font-family: "Gill Sans", sans-serif;
       margin-right: 5px;
     }
   }
@@ -67,15 +67,15 @@
     align-items: center;
     margin-right: 20px;
     list-style: none;
-    font-family: "Gill Sans", sans-serif; // Use Gill Sans font family
+    font-family: "Gill Sans", sans-serif;
 
     .menu-item {
       margin-right: 20px;
 
       &.active {
         background-color: #fff;
-        border-radius: 30px; // Increase border-radius to add more padding
-        padding: 10px 45px; // Add more padding
+        border-radius: 30px;
+        padding: 10px 45px;
       }
 
       a {
