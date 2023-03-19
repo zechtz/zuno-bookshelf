@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import TopHeaderContainer from "@/components/containers/TopHeaderContainer.vue";
+import BookListContainer from "@/components/containers/BookListContainer.vue";
+import FooterContainer from "@/components/containers/FooterContainer.vue";
 </script>
 
 <template>
   <div class="wrapper">
     <TopHeaderContainer />
-    <div class="book-container">
-      <BookSearch />
-      <BookList />
-    </div>
-    <Footer />
+    <BookListContainer />
+    <FooterContainer />
   </div>
 </template>
 
@@ -23,7 +22,7 @@ import TopHeaderContainer from "@/components/containers/TopHeaderContainer.vue";
 
 .book-container {
   margin-top: 200px;
-  width: 80%;
+  width: $box-width;
   position: relative;
 }
 </style>
