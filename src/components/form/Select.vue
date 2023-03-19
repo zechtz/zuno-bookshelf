@@ -17,6 +17,10 @@ const props = defineProps({
     type: Object as () => Entry<any>,
     required: false,
   },
+  label: {
+    type: String,
+    required: false,
+  },
 });
 
 const selectedEntry = ref(props.value);
@@ -34,6 +38,7 @@ const handleSelectionChange = (event: Event) => {
 </script>
 
 <template>
+  <label>Filter By Book Type</label>
   <select
     class="zuno-select"
     v-model="selectedEntry"
@@ -49,8 +54,16 @@ const handleSelectionChange = (event: Event) => {
 $button-border-radius: 10px;
 $input-bg-color: #faf8f8;
 
+label {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 16px;
+  color: #333;
+  transition: all 0.2s ease-out;
+}
+
 select {
-  font-size: 1.5rem;
   border: none;
   width: 20%;
   border-radius: 4px;
@@ -60,7 +73,9 @@ select {
   margin-right: 1rem;
   display: inline-block;
   line-height: 1.5em;
-  padding: 0.5em 3.5em 0.5em 1em;
+  padding: 16px;
+  font-size: 16px;
+  color: #333;
 
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -74,6 +89,23 @@ select {
     color: transparent;
     text-shadow: 0 0 0 #000;
   }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:invalid {
+    border-color: #f44336;
+  }
+}
+
+select:invalid + label {
+  color: #f44336;
 }
 
 .zuno-select {
