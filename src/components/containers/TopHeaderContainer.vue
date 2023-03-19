@@ -8,7 +8,7 @@ import BookSlides from "@/components/BookSlides.vue";
   <div class="container-wrapper">
     <Nav />
     <Cta />
-    <!-- <BookSlides /> -->
+    <BookSlides />
   </div>
 </template>
 
@@ -20,5 +20,8 @@ import BookSlides from "@/components/BookSlides.vue";
   flex-direction: column;
   align-items: center;
   background-color: #eae6d7;
+  background-image: url("@/assets/images/man_on-chair.png");
+  background-repeat: no-repeat;
+  background-position: 83% 5%;
 }
 </style>
