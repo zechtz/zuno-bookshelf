@@ -4,11 +4,7 @@
   <nav class="navigation">
     <div class="left-container">
       <div class="logo">
-        <img
-          src="../../assets/images/logo_1.png"
-          alt="Logo"
-          class="logo-image"
-        />
+        <img src="@/assets/images/logo_1.png" alt="Logo" class="logo-image" />
         <h1 class="logo-text">Zuno Library</h1>
       </div>
       <ul class="menu">
@@ -20,10 +16,10 @@
     </div>
     <div class="icons">
       <div class="cart">
-        <img src="../../assets/images/cart.svg" alt="Shopping Cart" />
+        <img src="@/assets/images/cart.svg" alt="Shopping Cart" />
       </div>
       <div class="avatar">
-        <img src="../../assets/images/rectangle_5.png" alt="User Avatar" />
+        <img src="@/assets/images/rectangle_5.png" alt="User Avatar" />
       </div>
     </div>
   </nav>
@@ -37,14 +33,14 @@
   position: relative;
   height: 80px;
   padding: 0 20px;
-  width: 80%;
+  width: $box-width;
 
   .left-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     height: 80px;
-    width: 80%;
+  width: $box-width;
   }
 
   .logo {
