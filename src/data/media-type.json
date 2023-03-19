@@ -1,0 +1,506 @@
+[
+  {
+    "Code": "pkbknh",
+    "Description": "Peak Picks Book",
+    "Code Type": "ItemType",
+    "Format Group": "",
+    "Format Subgroup": "",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "acart",
+    "Description": "Framed Art: Adult/YA",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Art",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "acbk",
+    "Description": "Book: Adult/YA",
+    "Code Type": "ItemType",
+    "Format Group": "Print",
+    "Format Subgroup": "Book",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "accas",
+    "Description": "Audio Tape: Adult/YA",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Audio Tape",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "accd",
+    "Description": "CD: Adult/YA",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Audio Disc",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "accdrom",
+    "Description": "CD-ROM: Adult/YA",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Data Disc",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "acdisk",
+    "Description": "Diskette: Adult/YA",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Data Disc",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "acdvd",
+    "Description": "DVD: Adult/YA",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Video Disc",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "aceq",
+    "Description": "Equipment: Adult/YA",
+    "Code Type": "ItemType",
+    "Format Group": "Equipment",
+    "Format Subgroup": "",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "aceqnh",
+    "Description": "Equipment: Adult/YA No Hold",
+    "Code Type": "ItemType",
+    "Format Group": "Equipment",
+    "Format Subgroup": "",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "acfold",
+    "Description": "Folder: Adult/YA",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Kit",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "ackit",
+    "Description": "Kit: Adult/YA",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Kit",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "acmap",
+    "Description": "Map: Adult/YA",
+    "Code Type": "ItemType",
+    "Format Group": "Print",
+    "Format Subgroup": "",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "acmus",
+    "Description": "Music Score: Adult/ya",
+    "Code Type": "ItemType",
+    "Format Group": "Print",
+    "Format Subgroup": "Music Score",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "acpam",
+    "Description": "Pamphlet: Adult/ya",
+    "Code Type": "ItemType",
+    "Format Group": "Print",
+    "Format Subgroup": "",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "acper",
+    "Description": "Magazine: Adult/ya",
+    "Code Type": "ItemType",
+    "Format Group": "Print",
+    "Format Subgroup": "Periodical",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "acphoto",
+    "Description": "Photographs: Adult/ya",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Art",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "acpost",
+    "Description": "Poster: Adult/YA",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Art",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "acrec",
+    "Description": "Record: Adult/YA",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Audio Disc",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "acslide",
+    "Description": "Slides: Adult/YA",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Film",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "acunkn",
+    "Description": "Other: Adult/YA",
+    "Code Type": "ItemType",
+    "Format Group": "Print",
+    "Format Subgroup": "",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "acvhs",
+    "Description": "Video (VHS): Adult/YA",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Video Tape",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "acvid",
+    "Description": "Video: Adult/YA",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Video Tape",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "ahbk",
+    "Description": "Book: Adult/YA: No Hold",
+    "Code Type": "ItemType",
+    "Format Group": "Print",
+    "Format Subgroup": "Book",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "ahmfc",
+    "Description": "Microfiche: Adult/YA No Hold",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Film",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "ahmfm",
+    "Description": "Microfilm: Adult/YA No Hold",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Film",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "alaptop",
+    "Description": "Laptop: Hourly Circulating",
+    "Code Type": "ItemType",
+    "Format Group": "Equipment",
+    "Format Subgroup": "",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "alvhs",
+    "Description": "Video (VHS): Adult/YA",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Video Tape",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "atablet",
+    "Description": "Tablet computer",
+    "Code Type": "ItemType",
+    "Format Group": "Equipment",
+    "Format Subgroup": "",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "bcbk",
+    "Description": "Book: Adult/Formerly No Fine",
+    "Code Type": "ItemType",
+    "Format Group": "Print",
+    "Format Subgroup": "Book",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "bccas",
+    "Description": "Audio Tape: Speech Adult Formerly No Fine",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Audio Tape",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "bccd",
+    "Description": "Book On CD: Rec Book Adult/Formerly No Fine",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Audiobook Disc",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "bccdrom",
+    "Description": "CD-ROM: Adult/Formerly No Fine",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Data Disc",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "bcdvd",
+    "Description": "DVD: Adult/Formerly No Fine",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Video Disc",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "bckit",
+    "Description": "Kit: Adult Formerly No Fine",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Kit",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "bcper",
+    "Description": "Magazine: Adult/Formerly No Fine",
+    "Code Type": "ItemType",
+    "Format Group": "Print",
+    "Format Subgroup": "Periodical",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "bcvhs",
+    "Description": "Video (VHS): Adult/Formerly No Fine",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Video Tape",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "blvhs",
+    "Description": "Video (VHS): Adult/Formerly No Fine Multi Vol",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Video Tape",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "dcillb",
+    "Description": "Ill Borrowed",
+    "Code Type": "ItemType",
+    "Format Group": "Print",
+    "Format Subgroup": "",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "dcilll",
+    "Description": "Ill Lending",
+    "Code Type": "ItemType",
+    "Format Group": "Print",
+    "Format Subgroup": "",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "dcord",
+    "Description": "On Order: Circulating Order",
+    "Code Type": "ItemType",
+    "Format Group": "Print",
+    "Format Subgroup": "",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "drbk",
+    "Description": "Book: Dummy Record",
+    "Code Type": "ItemType",
+    "Format Group": "Print",
+    "Format Subgroup": "Book",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "drcdrom",
+    "Description": "CD-ROM: Dummy Holding",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Data Disc",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "drmfc",
+    "Description": "Microfiche: Dummy Periodical",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Film",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "drmfmnp",
+    "Description": "Microfilm: Dummy Newspaper",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Film",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "drmfper",
+    "Description": "Microfilm: Dummy Periodical",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Film",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "drnp",
+    "Description": "Newspaper: Dummy Record",
+    "Code Type": "ItemType",
+    "Format Group": "Print",
+    "Format Subgroup": "Periodical",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "drper",
+    "Description": "Magazine: Dummy Record",
+    "Code Type": "ItemType",
+    "Format Group": "Print",
+    "Format Subgroup": "Periodical",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "drtest",
+    "Description": "Testing",
+    "Code Type": "ItemType",
+    "Format Group": "Print",
+    "Format Subgroup": "",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "scmed",
+    "Description": "Video Or Dvd: Short Circ Period",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Video Disc",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "ucflpdr",
+    "Description": "USB Floppy Drive",
+    "Code Type": "ItemType",
+    "Format Group": "Equipment",
+    "Format Subgroup": "",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "ucfold",
+    "Description": "Uncataloged Folder",
+    "Code Type": "ItemType",
+    "Format Group": "Print",
+    "Format Subgroup": "Kit",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "ucunkn",
+    "Description": "Uncataloged Material",
+    "Code Type": "ItemType",
+    "Format Group": "Print",
+    "Format Subgroup": "Book",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "unk",
+    "Description": "Unknown itype for item creation",
+    "Code Type": "ItemType",
+    "Format Group": "Print",
+    "Format Subgroup": "",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "xrbk",
+    "Description": "Part of Book: Analytic Record",
+    "Code Type": "ItemType",
+    "Format Group": "Print",
+    "Format Subgroup": "Book",
+    "Category Group": "",
+    "Category Subgroup": ""
+  },
+  {
+    "Code": "xrcdrom",
+    "Description": "Part of CD-ROM: Analytic Record",
+    "Code Type": "ItemType",
+    "Format Group": "Media",
+    "Format Subgroup": "Data Disc",
+    "Category Group": "",
+    "Category Subgroup": ""
+  }
+]
