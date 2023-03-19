@@ -44,8 +44,9 @@ h1 {
   color: #fff;
   text-decoration: none;
   font-size: 20px;
-  letter-spacing: 2px;
-  margin-top: 5px;
+  letter-spacing: 0px;
+  margin-left: 3px;
+  margin-top: 0px;
   font-family: "Gill Sans", sans-serif;
 }
 </style>
