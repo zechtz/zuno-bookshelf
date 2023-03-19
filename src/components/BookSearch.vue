@@ -1,30 +1,42 @@
 <script setup lang="ts">
 import Select from "@/components/form/Select.vue";
-import { ref } from "vue";
+import { BookType, getMediaTypes } from "@/data/service";
+import { computed, onMounted, reactive, ref } from "vue";
 
-interface Entry<T> {
-  value: T;
-  label: string;
+interface Data {
+  categories: Array<BookType>;
+  selectedCategory: BookType;
 }
 
-const entries: Entry<number>[] = [
-  { value: 1, label: "One" },
-  { value: 2, label: "Two" },
-  { value: 3, label: "Three" },
-];
+const emit = defineEmits(["optionSelected", "onSearch"]);
 
-const selectedCategory = ref(entries[0]);
+const data: Data = reactive({
+  categories: [],
+  selectedCategory: {} as BookType,
+});
 
-const filterBooksByCategory = (book: any) => {
-  console.log(book);
+onMounted(() => {
+  const media = getMediaTypes();
+  data.categories = media;
+});
+
+const filterBooksByCategory = (category: BookType) => {
+  emit("optionSelected", category);
 };
+
+const mappedCategories = computed(() => {
+  return data.categories.map((category) => ({
+    ...category,
+    label: `${category.Description} (${category.FormatGroup})`,
+  }));
+});
 </script>
 
 <template>
   <div class="search-container">
     <Select
-      :entries="entries"
-      v-model="selectedCategory"
+      :entries="mappedCategories"
+      v-model="data.selectedCategory"
       @optionSelected="filterBooksByCategory"
     />
     <div class="vertical-divider"></div>
