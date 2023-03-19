@@ -11,20 +11,19 @@
       <a href="#" class="button">View Categories</a>
     </div>
     <div class="hero-image">
-      <img src="../../assets/images/man_on-chair.png" />
+      <img src="@/assets/images/man_on-chair.png" />
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-$primary-color: #1c3f3a;
 $button-border-radius: 50px;
 
 .cta-container {
   display: flex;
   justify-content: space-between;
   padding: 0 20px 0 60px;
-  width: 80%;
+  width: $box-width;
   text-align: left;
 }
 
