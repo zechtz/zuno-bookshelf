@@ -31,6 +31,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  top: 50px;
   height: 80px;
   padding: 0 20px;
   width: $box-width;
