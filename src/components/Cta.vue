@@ -10,9 +10,6 @@
       </h1>
       <a href="#" class="button">View Categories</a>
     </div>
-    <div class="hero-image">
-      <img src="@/assets/images/man_on-chair.png" />
-    </div>
   </div>
 </template>
 
@@ -22,7 +19,6 @@ $button-border-radius: 50px;
 .cta-container {
   display: flex;
   justify-content: space-between;
-  padding: 0 20px 0 60px;
   width: $box-width;
   text-align: left;
 }
@@ -51,15 +47,5 @@ h1 {
   letter-spacing: 2px;
   margin-top: 5px;
   font-family: "Gill Sans", sans-serif;
-}
-
-.hero-image {
-  position: relative;
-
-  img {
-    position: absolute;
-    top: -100px;
-    right: -65px;
-  }
 }
 </style>
