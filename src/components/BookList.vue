@@ -1,208 +1,34 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { Book } from "@/data/service";
+
+const props = defineProps({
+  entries: {
+    type: Array as () => Array<Book>,
+    required: true,
+  },
+});
+</script>
 
 <template>
   <div class="book-list-intro">
     <div class="icon">
-      <img class="img" src="@/assets/images/heroiconssolidbookopen1388-sgru.svg" />
+      <img
+        class="img"
+        src="@/assets/images/heroiconssolidbookopen1388-sgru.svg"
+      />
       <h2 class="intro-text">Book Shelf</h2>
     </div>
   </div>
   <div class="card-grid">
-    <div class="card">
+    <div class="card" v-for="book in props.entries" :key="book.BibNum">
       <img src="@/assets/images/book-cover.png" alt="Image description" />
       <div class="card-info">
-        <h2>A Tale of Two Frameworks</h2>
+        <h2>{{ book.Title }}</h2>
         <div class="card-footer">
-          <span class="book-author">O'Rayan, Elle</span>
+          <span class="book-author">{{ book.Author }}</span>
           <div class="rating">
             <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
             <span>5.0</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="@/assets/images/book-cover.png" alt="Image description" />
-      <div class="card-info">
-        <h2>Peace, Love & Harmony</h2>
-        <div class="card-footer">
-          <span class="book-author">Scott, Jerry 1995</span>
-          <div class="rating">
-            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
-            <span>3.8</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="@/assets/images/book-cover.png" alt="Image description" />
-      <div class="card-info">
-        <h2>The Sand Castle Explained</h2>
-        <div class="card-footer">
-          <span class="book-author">Olson, Kayla</span>
-          <div class="rating">
-            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
-            <span>4.0</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="@/assets/images/book-cover.png" alt="Image description" />
-      <div class="card-info">
-        <h2>Lone Wolf</h2>
-        <div class="card-footer">
-          <span class="book-author">Picoult, Jodi</span>
-          <div class="rating">
-            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
-            <span>3.0</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="@/assets/images/book-cover.png" alt="Image description" />
-      <div class="card-info">
-        <h2>The English Daughter</h2>
-        <div class="card-footer">
-          <span class="book-author">Wadey, Maggie</span>
-          <div class="rating">
-            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
-            <span>4.5</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="@/assets/images/book-cover.png" alt="Image description" />
-      <div class="card-info">
-        <h2>A Tale of Two Frameworks</h2>
-        <div class="card-footer">
-          <span class="book-author">O'Rayan, Elle</span>
-          <div class="rating">
-            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
-            <span>5.0</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="@/assets/images/book-cover.png" alt="Image description" />
-      <div class="card-info">
-        <h2>Peace, Love & Harmony</h2>
-        <div class="card-footer">
-          <span class="book-author">Scott, Jerry 1995</span>
-          <div class="rating">
-            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
-            <span>3.8</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="@/assets/images/book-cover.png" alt="Image description" />
-      <div class="card-info">
-        <h2>The Sand Castle Explained</h2>
-        <div class="card-footer">
-          <span class="book-author">Olson, Kayla</span>
-          <div class="rating">
-            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
-            <span>4.0</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="@/assets/images/book-cover.png" alt="Image description" />
-      <div class="card-info">
-        <h2>Lone Wolf</h2>
-        <div class="card-footer">
-          <span class="book-author">Picoult, Jodi</span>
-          <div class="rating">
-            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
-            <span>3.0</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="@/assets/images/book-cover.png" alt="Image description" />
-      <div class="card-info">
-        <h2>The English Daughter</h2>
-        <div class="card-footer">
-          <span class="book-author">Wadey, Maggie</span>
-          <div class="rating">
-            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
-            <span>4.5</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="@/assets/images/book-cover.png" alt="Image description" />
-      <div class="card-info">
-        <h2>A Tale of Two Frameworks</h2>
-        <div class="card-footer">
-          <span class="book-author">O'Rayan, Elle</span>
-          <div class="rating">
-            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
-            <span>5.0</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="@/assets/images/book-cover.png" alt="Image description" />
-      <div class="card-info">
-        <h2>Peace, Love & Harmony</h2>
-        <div class="card-footer">
-          <span class="book-author">Scott, Jerry 1995</span>
-          <div class="rating">
-            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
-            <span>3.8</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="@/assets/images/book-cover.png" alt="Image description" />
-      <div class="card-info">
-        <h2>The Sand Castle Explained</h2>
-        <div class="card-footer">
-          <span class="book-author">Olson, Kayla</span>
-          <div class="rating">
-            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
-            <span>4.0</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="@/assets/images/book-cover.png" alt="Image description" />
-      <div class="card-info">
-        <h2>Lone Wolf</h2>
-        <div class="card-footer">
-          <span class="book-author">Picoult, Jodi</span>
-          <div class="rating">
-            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
-            <span>3.0</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="@/assets/images/book-cover.png" alt="Image description" />
-      <div class="card-info">
-        <h2>The English Daughter</h2>
-        <div class="card-footer">
-          <span class="book-author">Wadey, Maggie</span>
-          <div class="rating">
-            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
-            <span>4.5</span>
           </div>
         </div>
       </div>
