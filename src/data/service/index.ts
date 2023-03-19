@@ -1,7 +1,6 @@
-import * as media from "../media.json";
-import * as mediaTypes from "../media-type.json";
-import * as checkoutData from "../checkout.json";
-
+import { media } from "@/data/media";
+import { mediaTypes } from "@/data/media-type";
+import { checkoutData } from "@/data//checkout";
 
 export interface Book {
   BibNum: number;
@@ -16,37 +15,31 @@ export interface Book {
 }
 
 export interface BookType {
-  BibNum: number;
-  Title: string;
-  Author: string;
-  ISBN: string;
-  PublicationYear: number;
-  Publisher: string;
-  Subjects: string;
-  ItemType: string;
-  ItemCount: number;
+  Code: string;
+  Description: string;
+  CodeType: string;
+  FormatGroup: string;
+  FormatSubgroup: string;
+  CategoryGroup: string;
+  CategorySubgroup: string;
 }
 
-export interface BookCheckout {
-  BibNum: number;
-  Title: string;
-  Author: string;
-  ISBN: string;
-  PublicationYear: number;
-  Publisher: string;
-  Subjects: string;
+export interface CheckoutData {
+  BibNumber: number;
+  ItemBarcode: number;
   ItemType: string;
-  ItemCount: number;
+  CallNumber: string;
+  CheckoutDateTime: string;
 }
-const getMedia = () => {
+const getMedia = (): Array<Book> => {
   return media;
 };
 
-const getMediaTypes = () => {
+const getMediaTypes = (): Array<BookType> => {
   return mediaTypes;
 };
 
-const getCheckoutData = () => {
+const getCheckoutData = (): Array<CheckoutData> => {
   return checkoutData;
 };
 
