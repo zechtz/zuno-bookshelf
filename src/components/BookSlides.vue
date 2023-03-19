@@ -57,6 +57,7 @@
   position: relative;
   padding: 0;
   top: 100px;
+  left: -12px;
 
   &__container {
     display: flex;

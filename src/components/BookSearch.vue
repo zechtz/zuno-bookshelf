@@ -1,19 +1,39 @@
 <script setup lang="ts">
-const handleChange = (event: Event) => {
-  console.log("event", event);
+import Select from "@/components/form/Select.vue";
+import { ref } from "vue";
+
+interface Entry<T> {
+  value: T;
+  label: string;
+}
+
+const entries: Entry<number>[] = [
+  { value: 1, label: "One" },
+  { value: 2, label: "Two" },
+  { value: 3, label: "Three" },
+];
+
+const selectedCategory = ref(entries[0]);
+
+const filterBooksByCategory = (book: any) => {
+  console.log(book);
 };
 </script>
+
 <template>
   <div class="search-container">
-    <select class="zuno-select" @change="handleChange($event)">
-      <option value="all">All Categories</option>
-      <option value="books">Books</option>
-      <option value="magazines">Magazines</option>
-      <option value="newspapers">Newspapers</option>
-    </select>
+    <Select
+      :entries="entries"
+      v-model="selectedCategory"
+      @optionSelected="filterBooksByCategory"
+    />
     <div class="vertical-divider"></div>
     <div class="search-input-container">
-      <input type="text" class="search-input" placeholder="Find a book you like..." />
+      <input
+        type="text"
+        class="search-input"
+        placeholder="Find a book you like..."
+      />
       <button class="search-button">
         <span class="search-label">Search</span>
         <i class="fas fa-search"></i>
@@ -31,7 +51,7 @@ $input-bg-color: #faf8f8;
   align-items: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   width: 100%;
-  margin: 20px auto;
+  position: relative;
   background-color: $input-bg-color;
 
   select {
