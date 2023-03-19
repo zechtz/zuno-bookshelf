@@ -1,7 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const handleChange = (event: Event) => {
+  console.log("event", event);
+};
+</script>
 <template>
   <div class="search-container">
-    <select class="minimal">
+    <select class="zuno-select" @change="handleChange($event)">
       <option value="all">All Categories</option>
       <option value="books">Books</option>
       <option value="magazines">Magazines</option>
@@ -57,7 +61,7 @@ $input-bg-color: #faf8f8;
     }
   }
 
-  .minimal {
+  .zuno-select {
     background-image: linear-gradient(45deg, transparent 50%, gray 50%),
       linear-gradient(135deg, gray 50%, transparent 50%),
       linear-gradient(to right, #ccc, #ccc);
