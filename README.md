@@ -1,7 +1,9 @@
-# Vue 3 + TypeScript + Vite
+# Vue 3 + TypeScript + Vite 
 
-# To get started 
+### (getting started)
 
 ```yarn install```
 
 ```yarn dev```
+
+Open ```http://localhost:5173/```
