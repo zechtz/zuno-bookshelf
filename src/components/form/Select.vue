@@ -1,20 +1,15 @@
 <script setup lang="ts">
 import { defineProps, ref } from "vue";
 
-interface Entry<T> {
-  value: T;
-  label: string;
-}
-
 const emit = defineEmits(["optionSelected"]);
 
 const props = defineProps({
   entries: {
-    type: Array as () => Entry<any>[],
+    type: Array as () => Array<any>,
     required: true,
   },
   value: {
-    type: Object as () => Entry<any>,
+    type: Object as () => any,
     required: false,
   },
   label: {
@@ -38,9 +33,8 @@ const handleSelectionChange = (event: Event) => {
 </script>
 
 <template>
-  <label>Filter By Book Type</label>
   <select
-    class="zuno-select"
+    class="custom-select"
     v-model="selectedEntry"
     @change="handleSelectionChange"
   >
@@ -54,18 +48,10 @@ const handleSelectionChange = (event: Event) => {
 $button-border-radius: 10px;
 $input-bg-color: #faf8f8;
 
-label {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  font-size: 16px;
-  color: #333;
-  transition: all 0.2s ease-out;
-}
-
 select {
+  font-size: 1.5rem;
   border: none;
-  width: 20%;
+  width: 30%;
   border-radius: 4px;
   height: 60px;
   background-color: $input-bg-color;
@@ -73,9 +59,7 @@ select {
   margin-right: 1rem;
   display: inline-block;
   line-height: 1.5em;
-  padding: 16px;
-  font-size: 16px;
-  color: #333;
+  padding: 0.5em 3.5em 0.5em 1em;
 
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -89,26 +73,9 @@ select {
     color: transparent;
     text-shadow: 0 0 0 #000;
   }
-
-  &:focus {
-    outline: none;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-
-  &:invalid {
-    border-color: #f44336;
-  }
 }
 
-select:invalid + label {
-  color: #f44336;
-}
-
-.zuno-select {
+.custom-select {
   background-image: linear-gradient(45deg, transparent 50%, gray 50%),
     linear-gradient(135deg, gray 50%, transparent 50%),
     linear-gradient(to right, #ccc, #ccc);
