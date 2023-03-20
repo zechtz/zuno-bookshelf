@@ -1,5 +1,14 @@
 <template>
   <div class="carousel-wrapper">
+    <div class="book-list-intro">
+      <div class="icon">
+        <img
+          class="img"
+          src="@/assets/images/heroiconssolidbookopen1388-sgru.svg"
+        />
+        <h2 class="intro-text">Hot Reads</h2>
+      </div>
+    </div>
     <div class="carousel" ref="carousel" :style="data.carouselStyles">
       <div class="card" v-for="slide in data.slides" :key="slide">
         <img src="@/assets/images/book-cover.png" alt="Image 1" />
@@ -105,8 +114,8 @@ const resetTranslate = () => {
   width: $box-width;
   overflow: hidden;
   position: relative;
-  top: 185px;
-  margin-bottom: 40px;
+  top: 145px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
 
@@ -149,6 +158,36 @@ const resetTranslate = () => {
         border-radius: 100%;
         padding: 10px;
         border: 1px solid #dfdfdf;
+      }
+    }
+  }
+
+  .book-list-intro {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: $box-width;
+    font-family: $primary-font;
+    margin-left: 20px;
+
+    .icon {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+
+      .img {
+        height: 24px;
+        width: 24px;
+        margin-right: 0;
+      }
+
+      .intro-text {
+        margin-left: 5px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 32px;
+        color: #1e1e1e;
       }
     }
   }
