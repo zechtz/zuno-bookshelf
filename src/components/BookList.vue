@@ -21,13 +21,17 @@ const props = defineProps({
   </div>
   <div class="card-grid">
     <div class="card" v-for="book in props.entries" :key="book.BibNum">
+      <div class="bookmark-container">Bookmark</div>
       <img src="@/assets/images/book-cover.png" alt="Image description" />
       <div class="card-info">
         <h2>{{ book.Title }}</h2>
         <div class="card-footer">
           <span class="book-author">{{ book.Author }}</span>
           <div class="rating">
-            <img src="@/assets/images/heroiconssolidstar1344-r5uc.svg" />
+            <img
+              src="@/assets/images/heroiconssolidstar1344-r5uc.svg"
+              alt="book.Title"
+            />
             <span>5.0</span>
           </div>
         </div>
@@ -73,7 +77,7 @@ $star-color: #f3d23e;
   grid-template-columns: repeat(auto-fit, minmax(16%, 1fr));
   gap: 1rem;
   position: relative;
-  width: 100%;
+  width: $box-width;
   margin-bottom: 100px;
 
   .card {
@@ -86,8 +90,15 @@ $star-color: #f3d23e;
     img {
       max-width: 100%;
       border: 1px solid #dfdfdf;
-      width: 100%;
+      width: 240px;
       height: 283px;
+    }
+
+    .bookmark-container {
+      display: flex;
+      justify-content: end;
+      align-items: end;
+      position: absolute;
     }
 
     .card-info {
