@@ -1,29 +1,3 @@
-<template>
-  <div class="carousel-wrapper">
-    <div class="book-list-intro">
-      <div class="icon">
-        <img
-          class="img"
-          src="@/assets/images/heroiconssolidbookopen1388-sgru.svg"
-        />
-        <h2 class="intro-text">Hot Reads</h2>
-      </div>
-    </div>
-    <div class="carousel" ref="carousel" :style="data.carouselStyles">
-      <div class="card" v-for="slide in data.slides" :key="slide">
-        <img src="@/assets/images/book-cover.png" alt="Image 1" />
-      </div>
-    </div>
-    <div class="navigation-container">
-      <div class="prev" @click="prev"></div>
-      <div class="next" @click="next">
-        <img
-          src="@/assets/images/heroiconsoutlinearrowsmallright1404-ew0u.svg"
-        />
-      </div>
-    </div>
-  </div>
-</template>
 
 <script setup lang="ts">
 import { onMounted, reactive, ref } from "vue";
@@ -51,7 +25,7 @@ const setStep = () => {
   }
 };
 
-const next = () => {
+const nextSlide = () => {
   if (data.transitioning) return;
 
   data.transitioning = true;
@@ -66,7 +40,7 @@ const next = () => {
   });
 };
 
-const prev = () => {
+const prevSlide = () => {
   if (data.transitioning) return;
 
   data.transitioning = true;
@@ -108,6 +82,33 @@ const resetTranslate = () => {
   };
 };
 </script>
+
+<template>
+  <div class="carousel-wrapper">
+    <div class="book-list-intro">
+      <div class="icon">
+        <img
+          class="img"
+          src="@/assets/images/heroiconssolidbookopen1388-sgru.svg"
+        />
+        <h2 class="intro-text">Hot Reads</h2>
+      </div>
+    </div>
+    <div class="carousel" ref="carousel" :style="data.carouselStyles">
+      <div class="card" v-for="slide in data.slides" :key="slide">
+        <img src="@/assets/images/book-cover.png" alt="Image 1" />
+      </div>
+    </div>
+    <div class="navigation-container">
+      <div class="prev" @click="prevSlide"></div>
+      <div class="next" @click="nextSlide">
+        <img
+          src="@/assets/images/heroiconsoutlinearrowsmallright1404-ew0u.svg"
+        />
+      </div>
+    </div>
+  </div>
+</template>
 
 <style scoped lang="scss">
 .carousel-wrapper {
