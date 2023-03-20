@@ -1,158 +1,153 @@
-<script setup lang="ts"></script>
-
 <template>
-  <div class="carousel">
-    <div class="book-list-intro">
-      <div class="icon">
-        <img class="img" src="@/assets/images/heroiconssolidbookopen1388-sgru.svg" />
-        <h2 class="intro-text">Hot Reads</h2>
+  <div class="carousel-wrapper">
+    <div class="carousel" ref="carousel" :style="data.carouselStyles">
+      <div class="card" v-for="slide in data.slides" :key="slide">
+        <img src="@/assets/images/book-cover.png" alt="Image 1" />
       </div>
     </div>
-    <div class="carousel__container">
-      <!-- <button class="carousel__prev"> -->
-      <!--   <img src="@/assets/images/heroiconsoutlinearrowsmallright1404-ew0u.svg" alt="Previous" /> -->
-      <!-- </button> -->
-      <div class="carousel__items">
-        <div class="carousel__item">
-          <img src="@/assets/images/book-cover.png" alt="Image 1" />
-        </div>
-        <div class="carousel__item">
-          <img src="@/assets/images/book-cover.png" alt="Image 1" />
-        </div>
-        <div class="carousel__item">
-          <img src="@/assets/images/book-cover.png" alt="Image 1" />
-        </div>
-        <div class="carousel__item">
-          <img src="@/assets/images/book-cover.png" alt="Image 1" />
-        </div>
-        <div class="carousel__item">
-          <img src="@/assets/images/book-cover.png" alt="Image 1" />
-        </div>
-        <div class="carousel__item">
-          <img src="@/assets/images/book-cover.png" alt="Image 1" />
-        </div>
-        <div class="carousel__item">
-          <img src="@/assets/images/book-cover.png" alt="Image 1" />
-        </div>
-        <div class="carousel__item">
-          <img src="@/assets/images/book-cover.png" alt="Image 1" />
-        </div>
-        <div class="carousel__item">
-          <img src="@/assets/images/book-cover.png" alt="Image 1" />
-        </div>
+    <div class="navigation-container">
+      <div class="prev" @click="prev"></div>
+      <div class="next" @click="next">
+        <img
+          src="@/assets/images/heroiconsoutlinearrowsmallright1404-ew0u.svg"
+        />
       </div>
-      <button class="carousel__next">
-        <img src="@/assets/images/heroiconsoutlinearrowsmallright1404-ew0u.svg" alt="Next" />
-      </button>
     </div>
   </div>
 </template>
 
+<script setup lang="ts">
+import { onMounted, reactive, ref } from "vue";
+
+const carousel = ref<HTMLDivElement>();
+
+const data = reactive({
+  slides: [1, 2, 3, 4, 5, 6, 7, 8],
+  carouselStyles: {},
+  step: "",
+  transitioning: false,
+});
+
+onMounted(() => {
+  setStep();
+  resetTranslate();
+});
+
+const setStep = () => {
+  const carouselWidth = carousel?.value?.scrollWidth;
+  const totalCards = data.slides.length;
+  if (carouselWidth) {
+    data.step = `${carouselWidth / totalCards}px`;
+  }
+};
+
+const next = () => {
+  if (data.transitioning) return;
+
+  data.transitioning = true;
+
+  moveLeft();
+
+  afterTransition(() => {
+    const slide = data.slides.shift();
+    data.slides.push(slide);
+    resetTranslate();
+    data.transitioning = false;
+  });
+};
+
+const prev = () => {
+  if (data.transitioning) return;
+
+  data.transitioning = true;
+
+  moveRight();
+
+  afterTransition(() => {
+    const slide = data.slides.pop();
+    data.slides.unshift(slide);
+    resetTranslate();
+    data.transitioning = false;
+  });
+};
+
+const moveLeft = () => {
+  data.carouselStyles = {
+    transform: `translateX(-${data.step}) translateX(-${data.step})`,
+  };
+};
+
+const moveRight = () => {
+  data.carouselStyles = {
+    transform: `translateX(${data.step}) translateX(-${data.step})`,
+  };
+};
+
+const afterTransition = (callback: Function) => {
+  const listener = () => {
+    callback();
+    carousel?.value?.removeEventListener("transitionend", listener);
+  };
+  carousel?.value?.addEventListener("transitionend", listener);
+};
+
+const resetTranslate = () => {
+  data.carouselStyles = {
+    transition: "none",
+    transform: `translateX(-${data.step})`,
+  };
+};
+</script>
+
 <style scoped lang="scss">
-.carousel {
+.carousel-wrapper {
   width: $box-width;
+  overflow: hidden;
+  position: relative;
+  top: 185px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  position: relative;
-  padding: 0;
-  top: 100px;
-  left: -12px;
 
-  &__container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    overflow-x: hidden;
-    scrollbar-width: none;
-    /* hide scrollbar in Firefox */
-    -ms-overflow-style: none;
+  .carousel {
+    transition: transform 0.2s;
+    white-space: nowrap;
 
-    /* hide scrollbar in IE and Edge */
-    ::-webkit-scrollbar {
-      width: 0;
-      /* hide scrollbar in Chrome and Safari */
-    }
-  }
-
-  &__items {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 10px;
-    width: 100%;
-    flex-shrink: 0;
-  }
-
-  &__item {
-    flex-shrink: 0;
-    margin-right: 10px;
-    width: calc(100% / 5);
-    /* adjust to the number of visible items */
-    max-width: 240px;
-    /* adjust to the size of your thumbnails */
-    height: auto;
-
-    img {
-      border: 1px solid #dfdfdf;
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-  }
-
-  &__prev,
-  &__next {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    margin: 10px;
-    padding: 0;
-    width: 20px;
-    height: 20px;
-
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-  }
-
-  &__next {
-    transform: rotate(180deg);
-  }
-
-  .book-list-intro {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: $box-width;
-    font-family: $primary-font;
-    margin-left: 20px;
-
-    .icon {
-      display: flex;
-      align-items: center;
+    .card {
+      width: 240px;
       margin-right: 10px;
+      display: inline-flex;
+      height: 280px;
+      background-color: #39b1bd;
+      color: white;
+      align-items: center;
+      justify-content: center;
 
-      .img {
-        height: 24px;
-        width: 24px;
-        margin-right: 0;
+      img {
+        border: 1px solid #dfdfdf;
+        display: block;
+        width: 100%;
+        height: auto;
       }
+    }
+  }
 
-      .intro-text {
-        margin-left: 5px;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 28px;
-        line-height: 32px;
-        color: #1e1e1e;
+  .navigation-container {
+    display: flex;
+    position: relative;
+    top: -180px;
+    justify-content: space-between;
+
+    .next,
+    .prev {
+      cursor: pointer;
+
+      img {
+        background: #fff;
+        height: 60px;
+        border-radius: 100%;
+        padding: 10px;
+        border: 1px solid #dfdfdf;
       }
     }
   }
