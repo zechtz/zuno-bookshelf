@@ -115,7 +115,7 @@ const resetTranslate = () => {
   overflow: hidden;
   position: relative;
   top: 145px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   display: flex;
   flex-direction: column;
 

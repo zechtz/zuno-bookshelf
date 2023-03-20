@@ -94,7 +94,7 @@ const filterBooksByTitlte = (title: string) => {
 }
 
 .book-components-wrapper {
-  margin-top: 150px;
+  margin-top: 140px;
   width: $box-width;
   position: relative;
 }

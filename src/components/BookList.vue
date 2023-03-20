@@ -13,7 +13,10 @@ const props = defineProps({
 <template>
   <div class="book-list-intro">
     <div class="icon">
-      <img class="img" src="@/assets/images/heroiconssolidbookopen1388-sgru.svg" />
+      <img
+        class="img"
+        src="@/assets/images/heroiconssolidbookopen1388-sgru.svg"
+      />
       <h2 class="intro-text">Book Shelf</h2>
     </div>
   </div>
@@ -32,6 +35,8 @@ $star-color: #f3d23e;
   justify-content: flex-start;
   align-items: center;
   width: $box-width;
+  position: relative;
+  top: 40px;
   font-family: $primary-font;
 
   .icon {
