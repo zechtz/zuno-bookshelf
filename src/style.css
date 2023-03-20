@@ -3,7 +3,8 @@ body {
   padding: 0;
   background: #fff;
   min-height: 100vh;
-  text-align: center;
+  box-sizing: border-box;
+  height: 100vh;
 }
 
 a {
