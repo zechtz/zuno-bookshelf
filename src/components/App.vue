@@ -1,10 +1,7 @@
 <script setup lang="ts">
-import TopHeaderContainer from "@/components/containers/TopHeaderContainer.vue";
-import BookListContainer from "@/components/containers/BookListContainer.vue";
-import FooterContainer from "@/components/containers/FooterContainer.vue";
-
-interface Data {
-}
+import TopHeaderContainer from "components/containers/TopHeaderContainer.vue";
+import BookListContainer from "components/containers/BookListContainer.vue";
+import FooterContainer from "components/containers/FooterContainer.vue";
 </script>
 
 <template>
