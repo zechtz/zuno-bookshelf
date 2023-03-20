@@ -19,6 +19,7 @@
 <script setup lang="ts">
 import { onMounted, reactive, ref } from "vue";
 
+// NOTE: this component should probably be accepting slide props and just slide
 const carousel = ref<HTMLDivElement>();
 
 const data = reactive({
@@ -49,7 +50,7 @@ const next = () => {
   moveLeft();
 
   afterTransition(() => {
-    const slide = data.slides.shift();
+    const slide: number = data.slides.shift();
     data.slides.push(slide);
     resetTranslate();
     data.transitioning = false;
