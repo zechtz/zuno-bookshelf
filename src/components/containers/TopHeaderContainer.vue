@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Nav from "@/components/Nav.vue";
-import Cta from "@/components/Cta.vue";
-import BookSlides from "@/components/BookSlides.vue";
+import Nav from "components/Nav.vue";
+import Cta from "components/Cta.vue";
+import BookSlides from "components/BookSlides.vue";
 </script>
 
 <template>
@@ -14,7 +14,6 @@ import BookSlides from "@/components/BookSlides.vue";
 
 <style scoped lang="scss">
 .container-wrapper {
-  height: 70vh;
   width: 100%;
   display: flex;
   flex-direction: column;
