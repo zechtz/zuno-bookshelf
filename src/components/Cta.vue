@@ -18,7 +18,7 @@ $button-border-radius: 50px;
 
 .cta-container {
   position: relative;
-  top: 50px;
+  top: 40px;
   display: flex;
   justify-content: space-between;
   width: $box-width;
