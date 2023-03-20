@@ -1,61 +1,49 @@
 <script setup lang="ts">
-import Select from "@/components/form/Select.vue";
-import { BookType, getMediaTypes } from "@/data/service";
-import { computed, onMounted, reactive, ref } from "vue";
+import Select from "components/form/Select.vue";
+import Input from "components/form/Input.vue";
+import { BookType } from "@/data/service";
+import { reactive } from "vue";
 
-interface Data {
-  categories: Array<BookType>;
-  selectedCategory: BookType;
+const props = defineProps({
+  entries: {
+    type: Array as () => Array<BookType>,
+    required: true,
+  },
+});
+
+// make this generic?
+interface Data<T> {
+  selectedCategory: T;
 }
 
 const emit = defineEmits(["optionSelected", "onSearch"]);
 
-const data: Data = reactive({
-  categories: [],
+const data: Data<BookType> = reactive({
   selectedCategory: {} as BookType,
-});
-
-onMounted(() => {
-  const media = getMediaTypes();
-  data.categories = media;
 });
 
 const filterBooksByCategory = (category: BookType) => {
   emit("optionSelected", category);
 };
 
-const mappedCategories = computed(() => {
-  return data.categories.map((category) => ({
-    ...category,
-    label: `${category.Description} (${category.FormatGroup})`,
-  }));
-});
+const filterBooksByTitle = (value: string) => {
+  emit("onSearch", value);
+};
 </script>
 
 <template>
   <div class="search-container">
     <Select
-      :entries="mappedCategories"
+      :entries="props.entries"
       v-model="data.selectedCategory"
       @optionSelected="filterBooksByCategory"
     />
     <div class="vertical-divider"></div>
-    <div class="search-input-container">
-      <input
-        type="text"
-        class="search-input"
-        placeholder="Find a book you like..."
-      />
-      <button class="search-button">
-        <span class="search-label">Search</span>
-        <i class="fas fa-search"></i>
-      </button>
-    </div>
+    <Input label="Find the book you like..." @on-submit="filterBooksByTitle" />
   </div>
 </template>
 
 <style scoped lang="scss">
-$button-border-radius: 10px;
 $input-bg-color: #faf8f8;
 
 .search-container {
@@ -66,114 +54,9 @@ $input-bg-color: #faf8f8;
   position: relative;
   background-color: $input-bg-color;
 
-  select {
-    font-size: 1.5rem;
-    border: none;
-    width: 20%;
-    border-radius: 4px;
-    height: 60px;
-    background-color: $input-bg-color;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-right: 1rem;
-    display: inline-block;
-    line-height: 1.5em;
-    padding: 0.5em 3.5em 0.5em 1em;
-
-    margin: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-
-    :-moz-focusring {
-      color: transparent;
-      text-shadow: 0 0 0 #000;
-    }
-  }
-
-  .zuno-select {
-    background-image: linear-gradient(45deg, transparent 50%, gray 50%),
-      linear-gradient(135deg, gray 50%, transparent 50%),
-      linear-gradient(to right, #ccc, #ccc);
-    background-position: calc(100% - 20px) calc(1em + 2px),
-      calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
-    background-size: 5px 5px, 5px 5px, 1px 1.5em;
-    background-repeat: no-repeat;
-
-    :focus {
-      background-image: linear-gradient(45deg, gray 50%, transparent 50%),
-        linear-gradient(135deg, transparent 50%, gray 50%),
-        linear-gradient(to right, #ccc, #ccc);
-      background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em,
-        calc(100% - 2.5em) 0.5em;
-      background-size: 5px 5px, 5px 5px, 1px 1.5em;
-      background-repeat: no-repeat;
-      outline: 0;
-    }
-  }
-
   .vertical-divider {
     height: 100%;
     border-left: 2px solid #000;
-  }
-
-  .search-input-container {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    height: 45px;
-    border: none;
-    border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-    .search-input {
-      flex-grow: 1;
-      padding: 0.5rem 0.5rem 0.5rem 2rem;
-      height: 100%;
-      font-size: 1.5rem;
-      border: none;
-      border-radius: 4px;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-      background-color: $input-bg-color;
-      outline: none;
-
-      ::placeholder {
-        color: $primary-color;
-      }
-    }
-
-    .search-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      padding: 0.5rem;
-      border: none;
-      border-radius: 4px;
-      background-color: #1c3f3a;
-      color: #fff;
-      cursor: pointer;
-      height: 60px;
-      width: 200px;
-      border-radius: $button-border-radius;
-      transition: background-color 0.2s ease-in-out;
-
-      &:hover {
-        background-color: #0e2724;
-      }
-
-      .search-label {
-        margin-right: 0.5rem;
-      }
-
-      i {
-        font-size: 1rem;
-        color: #fff;
-      }
-    }
   }
 }
 </style>
