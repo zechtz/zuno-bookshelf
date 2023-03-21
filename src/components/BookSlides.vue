@@ -169,7 +169,6 @@ const resetTranslate = () => {
     align-items: center;
     width: $box-width;
     font-family: $primary-font;
-    margin-left: 20px;
 
     .icon {
       display: flex;
