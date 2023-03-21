@@ -42,7 +42,6 @@ $star-color: #f3d23e;
   .icon {
     display: flex;
     align-items: center;
-    margin-right: 10px;
 
     .img {
       height: 24px;

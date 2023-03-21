@@ -10,6 +10,7 @@ interface Data {
   categories: Array<BookType>;
   selectedCategory: BookType;
 }
+
 const data: Data = reactive({
   books: [] as Array<Book>,
   categories: [] as Array<BookType>,
