@@ -52,7 +52,6 @@ $input-bg-color: #faf8f8;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   width: 100%;
   position: relative;
-  top: -30px;
   background-color: $input-bg-color;
 
   .vertical-divider {

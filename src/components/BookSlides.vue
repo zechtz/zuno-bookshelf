@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 import { onMounted, reactive, ref } from "vue";
 
@@ -116,7 +115,7 @@ const resetTranslate = () => {
   overflow: hidden;
   position: relative;
   top: 145px;
-  margin-bottom: 0;
+  margin-bottom: -20px;
   display: flex;
   flex-direction: column;
 
