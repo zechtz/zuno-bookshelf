@@ -1,12 +1,19 @@
 <script setup lang="ts">
-import { onMounted, reactive, ref } from "vue";
+import { CSSProperties, onMounted, reactive, ref } from "vue";
 
 // NOTE: this component should probably be accepting slide props and just slide
 const carousel = ref<HTMLDivElement>();
 
-const data = reactive({
+interface Data {
+  slides: Array<number | undefined>;
+  step: string;
+  transitioning: boolean;
+  carouselStyles: CSSProperties;
+}
+
+const data: Data = reactive({
   slides: [1, 2, 3, 4, 5, 6, 7, 8],
-  carouselStyles: {},
+  carouselStyles: {} as CSSProperties,
   step: "",
   transitioning: false,
 });
@@ -32,7 +39,7 @@ const nextSlide = () => {
   moveLeft();
 
   afterTransition(() => {
-    const slide: number = data.slides.shift();
+    const slide = data.slides.shift();
     data.slides.push(slide);
     resetTranslate();
     data.transitioning = false;
@@ -86,10 +93,7 @@ const resetTranslate = () => {
   <div class="carousel-wrapper">
     <div class="book-list-intro">
       <div class="icon">
-        <img
-          class="img"
-          src="@/assets/images/heroiconssolidbookopen1388-sgru.svg"
-        />
+        <img class="img" src="@/assets/images/heroiconssolidbookopen1388-sgru.svg" />
         <h2 class="intro-text">Hot Reads</h2>
       </div>
     </div>
@@ -101,9 +105,7 @@ const resetTranslate = () => {
     <div class="navigation-container">
       <div class="prev" @click="prevSlide"></div>
       <div class="next" @click="nextSlide">
-        <img
-          src="@/assets/images/heroiconsoutlinearrowsmallright1404-ew0u.svg"
-        />
+        <img src="@/assets/images/heroiconsoutlinearrowsmallright1404-ew0u.svg" />
       </div>
     </div>
   </div>
